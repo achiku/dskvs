@@ -18,7 +18,7 @@ What dskvs can't do
 What dskvs can do
 =================
 
-- dskvs can receive HTTP request and return list of values in JSON format
+- dskvs can receive a HTTP request and return a list of values in JSON format
 - dskvs can atomically load data from good-old TSV
 
 .. this is it.
