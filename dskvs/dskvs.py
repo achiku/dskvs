@@ -1,14 +1,19 @@
 # -*- coding: utf-8 -*-
 import os
+import json
+
 from werkzeug.exceptions import HTTPException
 from werkzeug.routing import Map, Rule
 from werkzeug.wrappers import Response, Request
+
+from loader import create_data
 
 
 class Dskvs(object):
 
     def __init__(self, config):
         self.data_file_path = config['data_file_path']
+        self.internal_data = create_data(self.data_file_path)
         self.url_map = Map([
             Rule('/<schema>/<key>', endpoint='get_list'),
         ])
@@ -27,14 +32,16 @@ class Dskvs(object):
         return response(environ, start_response)
 
     def on_get_list(self, request, schema, key):
-        return Response('{0}.{1}'.format(schema, key), 'text/json')
+        l = self.internal_data[key]
+        return Response(json.dumps(l), 'application/json')
 
     def __call__(self, environ, start_response):
         return self.wsgi_app(environ, start_response)
 
 
 def create_app():
-    data_file_path = os.path.join(os.path.dirname(__file__), 'data')
+    data_file_path = os.path.join(
+        os.path.dirname(os.path.abspath(os.path.dirname(__file__))), 'data', 'data.tsv')
     app = Dskvs({'data_file_path': data_file_path})
     return app
 
