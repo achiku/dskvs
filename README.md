@@ -2,7 +2,6 @@ dskvs
 =====
 
 Deadly Simple KVS without a lot of features, but with atomic text file loader.
-It acts like usual KVS with RESTful interface but lacks a lot of features.
 
 
 What dskvs can't do
