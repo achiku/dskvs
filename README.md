@@ -50,7 +50,7 @@ python dskvs/dskvs.py
 
 Access to the followin URL.
 
-[http://localhost:5001/test/user_a](http://localhost:5001/test/user_a)
-[http://localhost:5001/test/user_a](http://localhost:5001/test/user_b)
+- [http://localhost:5001/test/user_a](http://localhost:5001/test/user_a)
+- [http://localhost:5001/test/user_a](http://localhost:5001/test/user_b)
 
 You'll get some JSON list, and that is it.
