@@ -1,3 +1,4 @@
+flake8
 pytest==2.6.1
 pytest-cov==1.7
 Werkzeug==0.9.6
