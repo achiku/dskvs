@@ -3,6 +3,8 @@ dskvs
 
 Deadly Simple KVS without a lot of features, but with atomic text file loader.
 
+This project is my personal experimental project, so please do not use it in production or anywhere!!
+
 
 What dskvs can't do
 ===================
@@ -21,3 +23,34 @@ What dskvs can do
 - dskvs can atomically load data from good-old TSV
 
 .. this is it.
+
+
+Install
+=======
+
+Clone and pip install.
+```
+git clone git@github.com:achiku/dskvs.git
+cd dskvs
+pip install -r requirements/development.txt
+```
+
+
+Create test data.
+```
+mkdir data
+cp ./tests/testdata.tsv ./data
+```
+
+
+Run debug-enabled server.
+```
+python dskvs/dskvs.py
+```
+
+Access to the followin URL.
+
+[http://localhost:5001/test/user_a](http://localhost:5001/test/user_a)
+[http://localhost:5001/test/user_a](http://localhost:5001/test/user_b)
+
+You'll get some JSON list, and that is it.
