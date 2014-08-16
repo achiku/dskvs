@@ -7,7 +7,8 @@ This project is my personal experimental project, so please do not use it in pro
 
 
 What dskvs can't do
-===================
+-------------------
+
 
 - dskvs can't update value by specifying key
 - dskvs can't load balance requests
@@ -17,7 +18,7 @@ What dskvs can't do
 
 
 What dskvs can do
-=================
+-----------------
 
 - dskvs can receive a HTTP request and return a list of values in JSON format
 - dskvs can atomically load data from good-old TSV
@@ -26,7 +27,7 @@ What dskvs can do
 
 
 Install(Python)
-===============
+---------------
 
 Clone and pip install.
 ```
@@ -58,6 +59,6 @@ You'll get some JSON list, and that is it.
 
 
 Install(Golang)
-===============
+---------------
 
 todo: write setup for golang
