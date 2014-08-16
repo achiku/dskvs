@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from dskvs.loader import create_data
+from .loader import create_data
 
 
 def test_create_data(file_path):
