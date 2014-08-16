@@ -25,8 +25,8 @@ What dskvs can do
 .. this is it.
 
 
-Install
-=======
+Install(Python)
+===============
 
 Clone and pip install.
 ```
@@ -54,3 +54,10 @@ Access to the followin URL.
 - [http://localhost:5001/test/user_b](http://localhost:5001/test/user_b)
 
 You'll get some JSON list, and that is it.
+
+
+
+Install(Golang)
+===============
+
+todo: write setup for golang
